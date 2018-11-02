@@ -1,0 +1,19 @@
+interface AbstractFactory
+Interface som berättar vad respektive konkret factory ska implementera för metod. I mitt fall createVehicle.
+Klinten behöver inte veta vilken factory som används eller vilket vehicle som returneras (plus att det alltid
+skapas ett nytt Vehicle.)
+
+Exempel på två konkreta factories som implementerar AbstractFactory, XWingFactory och TieFighterFactory.
+
+Varje factory implementerar createVehicle och returnerar sitt fordon.
+Klienten behöver inte veta, Vehicle v = factory.createVehicle();
+
+Klasserna XWing och TieFighter implementerar interface Vehicle. Klienten känner endast till
+AbstractVehicleFactory och Vehicle. Men! Oftast behövs en if else någonstans som vid runtime kan avgöra
+vilken typ av fabrik som ska användas. Känns då som att poängen med att klienten inte behöver känna
+till implementationen faller..LÖSNING! Använd dependency injection och skicka in implementationen i klientens
+metod. Se exempellänken nedan där man använt konfigurationsklass som avgör om det är Mac eller Windows och sedan
+skickar rätt implementation till klienten.
+
+Hyfsat exempel med GUI-knappar och checkboxar för olika OS:
+https://refactoring.guru/design-patterns/abstract-factory/java/example

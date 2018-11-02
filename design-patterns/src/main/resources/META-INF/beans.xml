@@ -1,0 +1,14 @@
+<beans xmlns="http://java.sun.com/xml/ns/javaee"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/beans_1_0.xsd" >
+
+       <decorators>
+              <!--<class>decorator.PriceDiscountDecorator</class>-->
+              <!--<class>decorator.BlackFridayDecorator</class>-->
+              <!--<class>decorator.StefansDecorator</class>-->
+              <!--<class>decorator.another.DecoratorService</class>-->
+              <!--<class>decorator.another.DecoratorService2</class>-->
+              <class>decorator.fileinputstream.VersionDecorator</class>
+              <class>decorator.bank.SendSms</class>
+       </decorators>
+</beans>
